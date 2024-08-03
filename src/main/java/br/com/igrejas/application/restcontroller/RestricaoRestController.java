@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.igrejas.domain.builder.ConverterDataUtil;
-import br.com.igrejas.domain.dto.AlergiaDTO;
 import br.com.igrejas.domain.dto.RestricaoDTO;
 import br.com.igrejas.domain.service.RestricaoService;
 
