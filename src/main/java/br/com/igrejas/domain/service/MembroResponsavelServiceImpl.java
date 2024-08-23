@@ -32,6 +32,7 @@ public class MembroResponsavelServiceImpl implements MembroResponsavelService {
 	public void salvar(MembroResponsavelDTO dto) {
 		repository.save(ConverterDataUtil.converteMembroDTOToEntity(dto));
 		
+		
 	}
 
 	@Override

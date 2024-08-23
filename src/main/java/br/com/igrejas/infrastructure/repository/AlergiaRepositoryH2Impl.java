@@ -24,14 +24,13 @@ public class AlergiaRepositoryH2Impl implements AlergiaRepository {
 
 	@Override
 	public void salvar(AlergiaModel alergia) {
-		// TODO Auto-generated method stub
+		alergiaRepositoryH2.save(alergia);
 		
 	}
 
 	@Override
 	public AlergiaModel procurarPorId(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return alergiaRepositoryH2.findById(id).orElseThrow(()-> new RuntimeException());
 	}
 
 	@Override

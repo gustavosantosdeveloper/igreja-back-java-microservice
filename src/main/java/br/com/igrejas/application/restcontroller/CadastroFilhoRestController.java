@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,8 +21,7 @@ import br.com.igrejas.domain.model.FilhoModel;
 import br.com.igrejas.domain.service.FilhoService;
 
 @RestController
-@RequestMapping("/cadastro-filho")
-@CrossOrigin("*")
+@RequestMapping("/api/v1/cadastro-filho")
 public class CadastroFilhoRestController {
 
 	

@@ -1,16 +1,41 @@
+
 spring:
+  application:
+    name: recepcao-usuario
   datasource:
-    url: jdbc:h2:mem:recepcao-igreja
-    username: sa
-    password: password
-    driverClassName: org.h2.Driver
-  sql.init.mode: always
+    url: jdbc:postgresql://localhost:5433/recepcao-usuario-db
+    username: postgres
+    password: Urso@2005
+    driverClassName: org.postgresql.Driver
+  sql.init.mode: never
   jackson:
     serialization:
       fail-on-empty-beans: false
-  
+
   jpa:
+    generate-ddl: false
+    show-sql: true
     hibernate:
       ddl-auto: update
-    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+server:
+  port: 8081 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+      
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1        
+        

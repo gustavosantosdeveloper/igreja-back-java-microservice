@@ -23,7 +23,7 @@ public class AlergiaServiceImpl implements AlergiaService {
 
 	@Override
 	public void incluir(AlergiaModel alergia) {
-		// TODO Auto-generated method stub
+		repository.salvar(alergia);
 		
 	}
 
